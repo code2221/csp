@@ -5,3 +5,10 @@ def test_mine_placement(self):
         for (r, c) in game2.mines:
             self.assertTrue(0 <= r < 6)
             self.assertTrue(0 <= c < 6)
+
+ def _place_mines(self):
+        """Randomly place mines in unique positions."""
+        while len(self.mines) < self.num_mines:
+            r = random.randint(0, self.rows - 1)
+            c = random.randint(0, self.cols - 1)
+            self.mines.add((r, c))
