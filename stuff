@@ -1,0 +1,7 @@
+def test_mine_placement(self):
+        game2 = Minesweeper(6, 6, 8)
+        self.assertEqual(len(game2.mines), 8)
+        # Ensure all mines within bounds
+        for (r, c) in game2.mines:
+            self.assertTrue(0 <= r < 6)
+            self.assertTrue(0 <= c < 6)
