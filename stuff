@@ -7,7 +7,7 @@ def test_mine_placement(self):
             self.assertTrue(0 <= c < 6)
 
  def _place_mines(self):
-        """Randomly place mines in unique positions."""
+        #Randomly place mines in unique positions.
         while len(self.mines) < self.num_mines:
             r = random.randint(0, self.rows - 1)
             c = random.randint(0, self.cols - 1)
