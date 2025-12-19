@@ -37,12 +37,10 @@ def bubble_swap_sort(list, verbose = False):
                 sorted = False
     return list
 
-#returns the index of target in list, or a half index if target is between elements
 def binary_search(sorted_list, target): 
-    #We start with the largest possible range of search, then narrow
     minimum = 0
     maximum = len(sorted_list)-1
-    while minimum<maximum: #Cut the window of search in half my checking the middle
+    while minimum<maximum: 
         index = (minimum+maximum)//2
         guess = sorted_list[index]
         if target == guess:
